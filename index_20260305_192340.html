@@ -689,8 +689,8 @@
         const dogType = (dogNumber % 2 === 0) ? 'cacau' : 'maya';
         game.dogs.push({
           x: rand(W * 0.35, W * 0.75),
-          y: rand(40, H - 40),
-          r: 18 * mobileScale,
+          y: rand(80, H - 80),
+          r: 36 * mobileScale,
           speed: (1.15 + i * 0.05) * (isMobile ? 0.95 : 1),
           frozen: false,
           type: dogType
