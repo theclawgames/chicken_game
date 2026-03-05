@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Nutella: Fuga no Galinheiro</title>
+  <style>
+    :root {
+      --panel: #fff9e8;
+      --text: #2b2b2b;
+      --border: #6b4f2a;
+      --btn: #ffe8a1;
+      --btn2: #ffd166;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #fff9db, #f0ead2 60%, #e9e2c8);
+      color: var(--text);
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      touch-action: none;
+      overscroll-behavior: none;
+    }
+
+    .wrap {
+      width: min(98vw, 1400px);
+      height: min(98dvh, 98vh);
+      background: var(--panel);
+      border: 3px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 8px;
+      background: linear-gradient(180deg, var(--btn), var(--btn2));
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
+      flex-wrap: nowrap;
+      min-height: 34px;
+    }
+
+    .pill {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(0,0,0,.2);
+      font-size: 11px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 34vw;
+    }
+
+    .game-area {
+      position: relative;
+      flex: 1;
+      min-height: 0;
+      display: flex;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #88b04b;
+      image-rendering: auto;
+    }
+
+    .help {
+      padding: 6px 10px 8px;
+      border-top: 2px dashed #c9b26f;
+      font-size: 13px;
+      background: #fff6d8;
+      line-height: 1.25;
+    }
+
+    .mobile-controls {
+      display: none;
+    }
+
+    .mobile-controls-row {
+      display: none;
+      touch-action: manipulation;
+      height: 120px;
+      padding: 8px 10px;
+      border-top: 1px solid #d8c17a;
+      background: #fff2c8;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .shoot-wrap,
+    .dpad-wrap {
+      width: 140px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+    }
+
+    .ctrl-btn {
+      border: 2px solid var(--border);
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffe0e0, #ffb3b3);
+      font-weight: 800;
+      color: #631d1d;
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+      touch-action: none;
+      outline: none;
+      display: grid;
+      place-items: center;
+    }
+
+    .ctrl-btn:active,
+    .ctrl-btn.active {
+      transform: translateY(1px);
+      filter: brightness(0.95);
+    }
+
+    .shoot {
+      width: 76px;
+      height: 76px;
+      font-size: 13px;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .dpad-wrap {
+      position: relative;
+    }
+
+    .dpad {
+      width: 136px;
+      height: 94px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0;
+      touch-action: none;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #e9f0ff, #c7d8ff);
+      border: 2px solid var(--border);
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    }
+
+    .arrow-btn {
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      min-height: 0;
+      border: 0;
+      border-radius: 0;
+      font-size: 22px;
+      line-height: 1;
+      background: transparent;
+      color: #1f356a;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .arrow-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .arrow-btn.active,
+    .arrow-btn:active {
+      background: rgba(31,53,106,.18);
+      transform: none;
+      filter: none;
+    }
+
+    .arrow-up { grid-column: 2; grid-row: 1; }
+    .arrow-left { grid-column: 1; grid-row: 2; }
+    .arrow-right { grid-column: 3; grid-row: 2; }
+    .arrow-down { grid-column: 2; grid-row: 3; }
+
+    .dpad-center {
+      grid-column: 2;
+      grid-row: 2;
+      border-radius: 50%;
+      align-self: center;
+      justify-self: center;
+      width: 58%;
+      height: 58%;
+      background: rgba(255,255,255,.9);
+      pointer-events: none;
+    }
+
+    .rotate-lock {
+      display: none;
+      position: absolute;
+      inset: 0;
+      background: rgba(20,20,20,.82);
+      color: #fff;
+      z-index: 20;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 960px) {
+      .wrap {
+        width: 100vw;
+        height: 100dvh;
+        height: 100vh;
+        border-radius: 0;
+        border-width: 0;
+        box-shadow: none;
+      }
+
+      header {
+        padding-top: max(4px, env(safe-area-inset-top));
+        min-height: 30px;
+      }
+
+      .pill {
+        font-size: 10px;
+        padding: 2px 6px;
+        max-width: 32vw;
+      }
+
+      .help {
+        display: none;
+      }
+
+      .mobile-controls-row {
+        display: flex;
+        padding-left: max(8px, env(safe-area-inset-left));
+        padding-right: max(8px, env(safe-area-inset-right));
+        padding-bottom: max(8px, env(safe-area-inset-bottom));
+        height: 110px;
+      }
+
+      .desktop-hint { display: none; }
+
+      .shoot-wrap,
+      .dpad-wrap {
+        width: 118px;
+      }
+
+      .shoot {
+        width: 64px;
+        height: 64px;
+        font-size: 11px;
+      }
+
+      .dpad {
+        width: 128px;
+        height: 88px;
+        gap: 0;
+      }
+
+      .arrow-btn {
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 960px) and (orientation: portrait) {
+      .rotate-lock { display: flex; }
+    }
+
+    .iphone-dogs {
+      display: none;
+      position: absolute;
+      top: max(8px, env(safe-area-inset-top));
+      left: max(8px, env(safe-area-inset-left));
+      z-index: 12;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.3);
+      background: rgba(255,255,255,.86);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .iphone-mode .wrap {
+      width: 100vw;
+      height: 100dvh;
+      border-radius: 0;
+      border-width: 0;
+      box-shadow: none;
+    }
+
+    .iphone-mode header,
+    .iphone-mode .help {
+      display: none;
+    }
+
+    .iphone-mode .game-area {
+      flex: 1;
+      height: 100%;
+      position: relative;
+      padding-left: 10vw;
+      padding-right: 10vw;
+      background: #fff9e8;
+    }
+
+    .iphone-mode .iphone-dogs {
+      display: inline-block;
+    }
+
+    .ipad-mode .iphone-dogs {
+      display: inline-block;
+    }
+
+    .iphone-mode .mobile-controls-row {
+      display: flex;
+      position: absolute;
+      left: max(8px, env(safe-area-inset-left));
+      right: max(8px, env(safe-area-inset-right));
+      bottom: max(8px, env(safe-area-inset-bottom));
+      height: 102px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      z-index: 13;
+      pointer-events: none;
+    }
+
+    .iphone-mode .shoot-wrap,
+    .iphone-mode .dpad-wrap {
+      pointer-events: auto;
+    }
+
+    .iphone-mode .shoot-wrap {
+      width: 132px;
+      align-self: end;
+      justify-self: start;
+    }
+
+    .iphone-mode .dpad-wrap {
+      width: 132px;
+      align-self: end;
+      justify-self: end;
+    }
+
+    .iphone-mode .shoot {
+      width: 72px;
+      height: 72px;
+      font-size: 12px;
+    }
+
+    .iphone-mode .dpad {
+      width: 132px;
+      height: 90px;
+    }
+
+    .iphone-mode .arrow-btn {
+      font-size: 20px;
+    }
+
+    .ipad-mode .wrap {
+      width: 100vw;
+      height: 100dvh;
+      border-radius: 0;
+      border-width: 0;
+      box-shadow: none;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background: #7aa848;
+    }
+
+    .ipad-mode header,
+    .ipad-mode .help { display: none; }
+
+    .ipad-mode .game-area {
+      flex: none;
+      width: 95vw;
+      height: 95vh;
+      height: 95dvh;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      background: #7aa848;
+    }
+
+    .ipad-mode .mobile-controls-row {
+      display: flex;
+      position: absolute;
+      left: max(2px, env(safe-area-inset-left));
+      right: max(2px, env(safe-area-inset-right));
+      bottom: max(2px, env(safe-area-inset-bottom));
+      height: 230px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      z-index: 13;
+      pointer-events: none;
+    }
+
+    .ipad-mode .desktop-hint { display: none; }
+
+    .ipad-mode .shoot-wrap,
+    .ipad-mode .dpad-wrap {
+      pointer-events: auto;
+      width: 230px;
+      align-self: end;
+    }
+
+    .ipad-mode .shoot-wrap {
+      justify-content: start;
+      margin-left: 0;
+      transform: translateY(20px);
+    }
+
+    .ipad-mode .dpad-wrap {
+      justify-content: end;
+    }
+
+    .ipad-mode .shoot {
+      width: 114px;
+      height: 114px;
+      font-size: 16px;
+    }
+
+    .ipad-mode .dpad {
+      width: 230px;
+      height: 230px;
+      border-radius: 34px;
+      background: #000;
+      border: 0;
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+
+    .ipad-mode .arrow-btn {
+      font-size: 56px;
+      color: #fff !important;
+      position: relative;
+      font-weight: 900;
+      text-shadow: none;
+      background: transparent !important;
+      -webkit-text-fill-color: #fff;
+      font-family: 'Arial Black', Arial, Helvetica, sans-serif;
+      line-height: 1;
+    }
+
+    .ipad-mode .arrow-up,
+    .ipad-mode .arrow-down,
+    .ipad-mode .arrow-left,
+    .ipad-mode .arrow-right {
+      color: #fff !important;
+      -webkit-text-fill-color: #fff;
+      background: transparent !important;
+    }
+
+    .ipad-mode .arrow-btn.active,
+    .ipad-mode .arrow-btn:active {
+      background: rgba(255,255,255,.16) !important;
+    }
+
+    .ipad-mode .arrow-btn::after {
+      content: '';
+      position: absolute;
+      inset: -22px;
+    }
+
+    .ipad-mode .dpad-center {
+      width: 70%;
+      height: 70%;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap" id="wrap">
+    <header>
+      <div class="pill" id="levelLabel">Fase: 1</div>
+      <div class="pill" id="dogsLabel">Cachorros: 1</div>
+      <div class="pill" id="statusLabel">Status: Correndo!</div>
+    </header>
+
+    <div class="game-area" id="gameArea">
+      <canvas id="game" aria-label="Jogo do Nutella"></canvas>
+      <div class="iphone-dogs" id="iphoneDogsLabel">Cachorros: 1</div>
+
+      <div class="rotate-lock">Gire o celular para <b>LANDSCAPE</b> para jogar.</div>
+    </div>
+
+    <div class="mobile-controls-row" id="mobileControls">
+      <div class="shoot-wrap">
+        <button type="button" class="ctrl-btn shoot" id="shootBtn">TIRO<br>MILHO</button>
+      </div>
+      <div class="dpad-wrap">
+        <div class="dpad" id="dpad">
+          <button type="button" class="ctrl-btn arrow-btn arrow-up" data-key="ArrowUp">▲</button>
+          <button type="button" class="ctrl-btn arrow-btn arrow-left" data-key="ArrowLeft">◄</button>
+          <button type="button" class="ctrl-btn arrow-btn arrow-right" data-key="ArrowRight">►</button>
+          <div class="dpad-center" aria-hidden="true"></div>
+          <button type="button" class="ctrl-btn arrow-btn arrow-down" data-key="ArrowDown">▼</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="help">
+      <span class="desktop-hint"><b>Desktop:</b> setas para mover, <b>ESPAÇO</b> para atirar.</span>
+      <span><b>Mobile:</b> use os botões na tela. No game over, toque na tela para reiniciar.</span>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    const levelLabel = document.getElementById('levelLabel');
+    const dogsLabel = document.getElementById('dogsLabel');
+    const iphoneDogsLabel = document.getElementById('iphoneDogsLabel');
+    const statusLabel = document.getElementById('statusLabel');
+    const mobileControls = document.getElementById('mobileControls');
+    const shootBtn = document.getElementById('shootBtn');
+    const dpadButtons = Array.from(document.querySelectorAll('[data-key]'));
+
+    const dogSprite = new Image();
+    dogSprite.src = 'assets/dog_only_nobg.png';
+    let dogSpriteReady = false;
+    dogSprite.onload = () => { dogSpriteReady = true; };
+
+    let W = 900, H = 560;
+    const ua = navigator.userAgent || '';
+    const isIPad = /iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isIPhone = /iPhone/.test(ua);
+    const isMobile = window.matchMedia('(max-width: 960px)').matches;
+    const useTouchControls = isMobile || isIPad || isIPhone;
+    const mobileScale = useTouchControls ? 0.5 : 1;
+
+    if (isIPad) document.body.classList.add('ipad-mode');
+    if (isIPhone) document.body.classList.add('iphone-mode');
+
+    const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
+
+    const game = {
+      level: 1,
+      over: false,
+      wonFlash: 0,
+      player: { x: 70, y: 280, r: 14 * mobileScale, speed: isMobile ? 3.1 : 3.4 },
+      dogs: [],
+      milhos: [],
+      coop: { x: 770, y: 210, w: 90 * mobileScale, h: 140 * mobileScale },
+      mother: { x: 815, y: 280, r: 16 * mobileScale }
+    };
+
+    const rand = (a, b) => Math.random() * (b - a) + a;
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+    const dist = (ax, ay, bx, by) => Math.hypot(ax - bx, ay - by);
+
+    document.addEventListener('selectstart', (e) => e.preventDefault());
+    document.addEventListener('gesturestart', (e) => e.preventDefault());
+
+    async function tryLockLandscape() {
+      if (!isMobile) return;
+      try {
+        if (screen.orientation && screen.orientation.lock) {
+          await screen.orientation.lock('landscape');
+        }
+      } catch (_) {}
+    }
+
+    function resizeCanvas() {
+      const dpr = Math.max(1, window.devicePixelRatio || 1);
+      const rect = canvas.getBoundingClientRect();
+      W = Math.max(560, Math.floor(rect.width));
+      H = Math.max(280, Math.floor(rect.height));
+      canvas.width = Math.floor(W * dpr);
+      canvas.height = Math.floor(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      game.coop.x = W - (game.coop.w + 36 * mobileScale);
+      game.coop.y = H / 2 - game.coop.h / 2;
+      game.mother.x = game.coop.x + game.coop.w / 2 + 6 * mobileScale;
+      game.mother.y = H / 2;
+
+      game.player.x = clamp(game.player.x, game.player.r, W - game.player.r);
+      game.player.y = clamp(game.player.y, game.player.r, H - game.player.r);
+
+      for (const d of game.dogs) {
+        d.x = clamp(d.x, d.r, W - d.r);
+        d.y = clamp(d.y, d.r, H - d.r);
+      }
+    }
+
+    function spawnDogs(n) {
+      game.dogs = [];
+      for (let i = 0; i < n; i++) {
+        game.dogs.push({
+          x: rand(W * 0.35, W * 0.75),
+          y: rand(40, H - 40),
+          r: 18 * mobileScale,
+          speed: (1.15 + i * 0.05) * (isMobile ? 0.95 : 1),
+          frozen: false
+        });
+      }
+    }
+
+    function resetPlayer() {
+      game.player.x = 70;
+      game.player.y = H / 2;
+      game.milhos = [];
+    }
+
+    function updateHUD() {
+      levelLabel.textContent = 'Fase: ' + game.level;
+      dogsLabel.textContent = 'Cachorros: ' + game.dogs.length;
+      if (iphoneDogsLabel) iphoneDogsLabel.textContent = 'Cachorros: ' + game.dogs.length;
+    }
+
+    function nextLevel() {
+      game.level++;
+      resetPlayer();
+      spawnDogs(game.level);
+      game.wonFlash = 36;
+      statusLabel.textContent = 'Status: Fase ' + game.level + '!';
+      updateHUD();
+    }
+
+    function restartGame() {
+      game.level = 1;
+      game.over = false;
+      resetPlayer();
+      spawnDogs(1);
+      statusLabel.textContent = 'Status: Correndo!';
+      updateHUD();
+    }
+
+    function shootMilho() {
+      if (game.over || game.milhos.length > 0) return;
+      const p = game.player;
+      const sx = p.x + p.r + 5 * mobileScale;
+      const spread = 5 * mobileScale;
+      game.milhos.push({ x: sx, y: p.y - spread, dx: 1, dy: 0, r: 4.5 * mobileScale, speed: 7.2 });
+      game.milhos.push({ x: sx, y: p.y + spread, dx: 1, dy: 0, r: 4.5 * mobileScale, speed: 7.2 });
+    }
+
+    function setKey(key, down) {
+      if (key in keys) keys[key] = down;
+    }
+
+    function bindDesktopInput() {
+      window.addEventListener('keydown', (e) => {
+        if (e.key in keys) { setKey(e.key, true); e.preventDefault(); }
+        if (e.code === 'Space') { shootMilho(); e.preventDefault(); }
+        if (game.over && e.key === 'Enter') restartGame();
+      }, { passive: false });
+
+      window.addEventListener('keyup', (e) => {
+        if (e.key in keys) { setKey(e.key, false); e.preventDefault(); }
+      }, { passive: false });
+    }
+
+    function bindMobileControls() {
+      if (!useTouchControls) return;
+
+      const bindHold = (btn, key) => {
+        let active = false;
+        const setDown = (ev) => {
+          if (ev) ev.preventDefault();
+          active = true;
+          setKey(key, true);
+          btn.classList.add('active');
+        };
+        const setUp = (ev) => {
+          if (ev) ev.preventDefault();
+          active = false;
+          setKey(key, false);
+          btn.classList.remove('active');
+        };
+
+        btn.addEventListener('pointerdown', setDown, { passive: false });
+        btn.addEventListener('pointerup', setUp, { passive: false });
+        btn.addEventListener('pointercancel', setUp, { passive: false });
+        btn.addEventListener('pointerleave', (ev) => { if (active) setUp(ev); }, { passive: false });
+
+        btn.addEventListener('touchstart', setDown, { passive: false });
+        btn.addEventListener('touchend', setUp, { passive: false });
+        btn.addEventListener('touchcancel', setUp, { passive: false });
+
+        btn.addEventListener('mousedown', setDown, { passive: false });
+        btn.addEventListener('mouseup', setUp, { passive: false });
+      };
+
+      dpadButtons.forEach((btn) => bindHold(btn, btn.dataset.key));
+
+      const shootDown = (ev) => {
+        if (ev) ev.preventDefault();
+        shootBtn.classList.add('active');
+        shootMilho();
+      };
+      const shootUp = (ev) => {
+        if (ev) ev.preventDefault();
+        shootBtn.classList.remove('active');
+      };
+
+      shootBtn.addEventListener('pointerdown', shootDown, { passive: false });
+      shootBtn.addEventListener('pointerup', shootUp, { passive: false });
+      shootBtn.addEventListener('pointercancel', shootUp, { passive: false });
+      shootBtn.addEventListener('touchstart', shootDown, { passive: false });
+      shootBtn.addEventListener('touchend', shootUp, { passive: false });
+      shootBtn.addEventListener('touchcancel', shootUp, { passive: false });
+      shootBtn.addEventListener('mousedown', shootDown, { passive: false });
+      shootBtn.addEventListener('mouseup', shootUp, { passive: false });
+
+      const restartIfOver = (ev) => {
+        if (!game.over) return;
+        if (ev) ev.preventDefault();
+        restartGame();
+      };
+
+      canvas.addEventListener('pointerdown', restartIfOver, { passive: false });
+      canvas.addEventListener('touchstart', restartIfOver, { passive: false });
+      canvas.addEventListener('mousedown', restartIfOver, { passive: false });
+      document.addEventListener('touchstart', restartIfOver, { passive: false });
+      document.addEventListener('pointerdown', restartIfOver, { passive: false });
+    }
+
+    function updatePlayer() {
+      let dx = 0, dy = 0;
+      if (keys.ArrowUp) dy -= 1;
+      if (keys.ArrowDown) dy += 1;
+      if (keys.ArrowLeft) dx -= 1;
+      if (keys.ArrowRight) dx += 1;
+
+
+      if (dx !== 0 || dy !== 0) {
+        const len = Math.hypot(dx, dy) || 1;
+        dx /= len;
+        dy /= len;
+        game.player.x += dx * game.player.speed;
+        game.player.y += dy * game.player.speed;
+      }
+
+      game.player.x = clamp(game.player.x, game.player.r, W - game.player.r);
+      game.player.y = clamp(game.player.y, game.player.r, H - game.player.r);
+    }
+
+    function updateDogs() {
+      for (const d of game.dogs) {
+        if (d.frozen) continue;
+        const dx = game.player.x - d.x;
+        const dy = game.player.y - d.y;
+        const len = Math.hypot(dx, dy) || 1;
+        d.x += (dx / len) * d.speed;
+        d.y += (dy / len) * d.speed;
+      }
+    }
+
+    function updateMilho() {
+      for (let i = game.milhos.length - 1; i >= 0; i--) {
+        const m = game.milhos[i];
+        m.x += m.dx * m.speed;
+        m.y += m.dy * m.speed;
+
+        if (m.x < -10 || m.x > W + 10 || m.y < -10 || m.y > H + 10) {
+          game.milhos.splice(i, 1);
+          continue;
+        }
+
+        for (const d of game.dogs) {
+          if (d.frozen) continue;
+          if (dist(m.x, m.y, d.x, d.y) <= m.r + d.r) {
+            d.frozen = true;
+            game.milhos.splice(i, 1);
+            statusLabel.textContent = 'Status: Cachorro paralisado!';
+            break;
+          }
+        }
+      }
+    }
+
+    function checkCollisions() {
+      for (const d of game.dogs) {
+        if (d.frozen) continue;
+        if (dist(d.x, d.y, game.player.x, game.player.y) <= d.r + game.player.r - 2) {
+          game.over = true;
+          statusLabel.textContent = 'Status: Pegaram o Nutella!';
+          return;
+        }
+      }
+
+      if (dist(game.player.x, game.player.y, game.mother.x, game.mother.y) <= game.player.r + game.mother.r + 6) {
+        nextLevel();
+      }
+    }
+
+    function drawField() {
+      ctx.fillStyle = '#7aa848';
+      ctx.fillRect(0, 0, W, H);
+      ctx.strokeStyle = 'rgba(255,255,255,.15)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x <= W; x += 40) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+      for (let y = 0; y <= H; y += 40) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+    }
+
+    function drawCoopAndMother() {
+      const c = game.coop;
+      const s = mobileScale;
+      ctx.fillStyle = '#8d5524'; ctx.fillRect(c.x, c.y, c.w, c.h);
+      ctx.fillStyle = '#c68642'; ctx.fillRect(c.x + 8 * s, c.y + 12 * s, c.w - 16 * s, c.h - 20 * s);
+      ctx.fillStyle = '#6a994e';
+      ctx.beginPath(); ctx.moveTo(c.x - 8 * s, c.y + 10 * s); ctx.lineTo(c.x + c.w / 2, c.y - 35 * s); ctx.lineTo(c.x + c.w + 8 * s, c.y + 10 * s); ctx.closePath(); ctx.fill();
+      const m = game.mother;
+      ctx.fillStyle = '#f5f5f5'; ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#fca311';
+      ctx.beginPath(); ctx.moveTo(m.x + m.r - 2 * s, m.y); ctx.lineTo(m.x + m.r + 10 * s, m.y - 4 * s); ctx.lineTo(m.x + m.r + 10 * s, m.y + 4 * s); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#e63946'; ctx.beginPath(); ctx.arc(m.x - 2 * s, m.y - m.r + 3 * s, 4 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#111'; ctx.beginPath(); ctx.arc(m.x + 4 * s, m.y - 3 * s, 2 * s, 0, Math.PI * 2); ctx.fill();
+    }
+
+    function drawPlayer() {
+      const p = game.player;
+      const s = mobileScale;
+      ctx.fillStyle = '#2f2f2f'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#8c8c8c'; ctx.beginPath(); ctx.arc(p.x - 5 * s, p.y - 3 * s, p.r * 0.6, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#fca311';
+      ctx.beginPath(); ctx.moveTo(p.x + p.r - 2 * s, p.y); ctx.lineTo(p.x + p.r + 8 * s, p.y - 4 * s); ctx.lineTo(p.x + p.r + 8 * s, p.y + 4 * s); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(p.x + 3 * s, p.y - 3 * s, 2.5 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#111'; ctx.beginPath(); ctx.arc(p.x + 3 * s, p.y - 3 * s, 1.3 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = 'rgba(0,0,0,.55)'; ctx.font = `bold ${useTouchControls ? 9 : 13}px sans-serif`; ctx.fillText('NUTELLA', p.x - (useTouchControls ? 18 : 30), p.y - (useTouchControls ? 12 : 20));
+    }
+
+    function drawDog(d, i) {
+      const s = mobileScale;
+
+      if (isIPhone && dogSpriteReady) {
+        const size = d.r * 2.45;
+        const x = d.x - size / 2;
+        const y = d.y - size / 2;
+        ctx.save();
+        if (d.frozen) ctx.globalAlpha = 0.72;
+        ctx.drawImage(dogSprite, x, y, size, size);
+        ctx.restore();
+
+        if (d.frozen) {
+          ctx.strokeStyle = '#d9edff';
+          ctx.lineWidth = Math.max(1, 2 * s);
+          ctx.beginPath();
+          ctx.arc(d.x, d.y, d.r + 4 * s, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+
+        ctx.fillStyle = 'rgba(0,0,0,.45)';
+        ctx.font = `bold ${useTouchControls ? 8 : 12}px sans-serif`;
+        ctx.fillText('cão ' + (i + 1), d.x - (useTouchControls ? 10 : 16), d.y - (useTouchControls ? 14 : 24));
+        return;
+      }
+
+      ctx.fillStyle = d.frozen ? '#5f7c9c' : '#9c6644';
+      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = d.frozen ? '#7f9dbd' : '#7f5539';
+      ctx.beginPath(); ctx.arc(d.x - 10 * s, d.y - 12 * s, 6 * s, 0, Math.PI * 2); ctx.arc(d.x + 10 * s, d.y - 12 * s, 6 * s, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#111'; ctx.beginPath(); ctx.arc(d.x - 5 * s, d.y - 3 * s, 2 * s, 0, Math.PI * 2); ctx.arc(d.x + 5 * s, d.y - 3 * s, 2 * s, 0, Math.PI * 2); ctx.fill();
+      if (d.frozen) { ctx.strokeStyle = '#d9edff'; ctx.lineWidth = Math.max(1, 2 * s); ctx.beginPath(); ctx.arc(d.x, d.y, d.r + 3 * s, 0, Math.PI * 2); ctx.stroke(); }
+      ctx.fillStyle = 'rgba(0,0,0,.45)'; ctx.font = `bold ${useTouchControls ? 8 : 12}px sans-serif`; ctx.fillText('cão ' + (i + 1), d.x - (useTouchControls ? 10 : 16), d.y - (useTouchControls ? 14 : 24));
+    }
+
+    function drawMilho() {
+      for (const m of game.milhos) {
+        ctx.fillStyle = '#ffd166'; ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = '#e09f3e'; ctx.lineWidth = 1; ctx.stroke();
+      }
+    }
+
+    function drawWinFlash() {
+      if (game.wonFlash > 0) {
+        const a = Math.min(0.45, game.wonFlash / 70);
+        ctx.fillStyle = `rgba(42,157,143,${a})`;
+        ctx.fillRect(0, 0, W, H);
+        game.wonFlash--;
+      }
+    }
+
+    function drawGameOver() {
+      const t1 = useTouchControls ? 30 : 44;
+      const t2 = useTouchControls ? 19 : 24;
+      const t3 = useTouchControls ? 14 : 19;
+      ctx.fillStyle = 'rgba(0,0,0,.58)';
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = '#fff';
+      ctx.textAlign = 'center';
+      ctx.font = `bold ${t1}px sans-serif`;
+      ctx.fillText('Fim de jogo!', W / 2, H / 2 - (isMobile ? 30 : 42));
+      ctx.font = `bold ${t2}px sans-serif`;
+      ctx.fillText('Fase ' + game.level, W / 2, H / 2 + (isMobile ? -2 : 2));
+      ctx.font = `${t3}px sans-serif`;
+      ctx.fillText(useTouchControls ? 'Toque na tela para reiniciar' : 'Toque na tela (mobile) ou ENTER (desktop) para reiniciar', W / 2, H / 2 + (useTouchControls ? 24 : 40));
+      ctx.textAlign = 'left';
+    }
+
+    function tick() {
+      if (!game.over) {
+        updatePlayer();
+        updateDogs();
+        updateMilho();
+        checkCollisions();
+      }
+
+      drawField();
+      drawCoopAndMother();
+      for (let i = 0; i < game.dogs.length; i++) drawDog(game.dogs[i], i);
+      drawMilho();
+      drawPlayer();
+      drawWinFlash();
+      if (game.over) drawGameOver();
+
+      requestAnimationFrame(tick);
+    }
+
+    function init() {
+      bindDesktopInput();
+      bindMobileControls();
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      window.addEventListener('orientationchange', () => setTimeout(resizeCanvas, 150));
+      document.addEventListener('pointerdown', tryLockLandscape, { once: true });
+      spawnDogs(1);
+      updateHUD();
+      tick();
+    }
+
+    init();
+  </script>
+</body>
+</html>

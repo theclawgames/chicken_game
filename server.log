@@ -1,0 +1,431 @@
+127.0.0.1 - - [04/Mar/2026 21:33:50] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 21:34:20] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 21:34:54] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 21:34:55] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 21:34:55] "GET /favicon.ico HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 21:58:25] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 21:58:28] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 21:58:28] "GET /favicon.ico HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 21:58:48] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 21:59:11] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 21:59:16] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 21:59:26] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 21:59:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:08:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:08:01] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:08:04] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:08:14] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:08:57] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:11:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:11:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:11:18] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:11:18] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:11:21] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:12:16] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:15:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:15:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:15:35] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:15:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:15:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:15:38] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:15:51] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:16:34] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:16:36] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:16:36] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:16:37] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:16:37] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:16:38] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:16:38] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:16:39] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:16:39] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:16:39] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:16:39] "GET /favicon.ico HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:16:40] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:16:40] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:16:41] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:16:41] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:16:41] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:16:41] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:16:42] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:16:42] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:16:42] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:16:42] "GET /favicon.ico HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:16:52] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:16:52] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:16:53] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:16:53] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:16:54] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:16:54] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:16:55] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:16:55] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:17:20] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:17:20] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:17:21] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:17:21] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:17:22] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:17:22] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:17:23] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:17:23] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:17:37] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:17:39] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:17:39] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:17:39] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:17:39] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:17:40] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:17:40] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:17:40] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:17:40] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:18:06] "GET / HTTP/1.1" 304 -
+149.19.165.129 - - [04/Mar/2026 22:18:07] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:18:07] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:18:08] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:18:08] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:18:08] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:18:08] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:18:09] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:18:09] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:18:21] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:18:21] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:18:22] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:18:22] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:18:22] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:18:22] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:18:23] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:18:23] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:19:13] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:19:13] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:19:13] "GET /favicon.ico HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:19:20] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:19:50] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:19:51] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:19:51] "GET /favicon.ico HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:19:59] "GET / HTTP/1.1" 200 -
+147.185.133.252 - - [04/Mar/2026 22:22:04] code 400, message Bad request version ('À\\x13À')
+147.185.133.252 - - [04/Mar/2026 22:22:04] "\x16\x03\x01\x00è\x01\x00\x00ä\x03\x03K!3Éeñ»@µÝÂ\x1c:\x91¼ÁÞk-®\x10¾Ð\x8fÕå+Ü8ËïÚ Í¼\x85?lçVPVvÇ½:\\Ê\x11\x8cõ\x03ïî\x00rû\x94\x88ÔýD\x0bàõ\x00\x1cÀ+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
+147.185.133.252 - - [04/Mar/2026 22:22:04] code 400, message Bad request version ('À(À$À\\x14À')
+147.185.133.252 - - [04/Mar/2026 22:22:04] "\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x031\x0c_&\x9b\x7f\x83S,\x91kÈ/\x013Ö\x91_\x9f½ïy§\x90mu\x8c\x18ðÒò\x85\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À" 400 -
+127.0.0.1 - - [04/Mar/2026 22:24:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:24:53] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:24:54] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:25:17] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:25:29] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:27:40] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:27:41] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:27:41] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:27:42] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:27:42] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:27:42] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:27:42] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:27:43] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:27:43] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+127.0.0.1 - - [04/Mar/2026 22:27:55] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:27:55] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:28:05] "GET / HTTP/1.1" 200 -
+103.203.57.20 - - [04/Mar/2026 22:29:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:29:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:29:40] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:29:40] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:29:59] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:30:09] "GET / HTTP/1.1" 304 -
+168.181.64.186 - - [04/Mar/2026 22:30:10] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:30:10] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:30:11] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:30:11] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:30:11] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:30:11] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:30:12] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:30:12] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:33:18] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:33:20] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:33:20] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:33:21] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:33:21] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:33:21] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:33:21] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:33:22] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:33:22] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:33:22] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:33:24] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:33:29] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:33:33] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:33:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:33:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:33:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:33:41] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:33:41] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:33:54] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:35:58] "GET / HTTP/1.1" 304 -
+149.19.165.129 - - [04/Mar/2026 22:35:58] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:35:58] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:35:59] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:35:59] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:36:00] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:36:00] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:36:00] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:36:00] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+127.0.0.1 - - [04/Mar/2026 22:37:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:37:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:37:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:37:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:37:51] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:37:51] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:39:01] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:40:33] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:40:34] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:40:34] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:40:35] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:40:35] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:40:35] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:40:35] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:40:36] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:40:36] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:43:58] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:43:58] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [04/Mar/2026 22:44:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:44:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:44:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:44:01] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:44:01] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:44:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:44:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:44:05] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:44:14] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:44:28] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:44:28] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:44:28] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:44:29] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:44:29] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:44:30] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:44:30] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:44:30] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:44:30] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+127.0.0.1 - - [04/Mar/2026 22:47:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:47:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Mar/2026 22:47:44] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [04/Mar/2026 22:47:44] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 22:47:56] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [04/Mar/2026 22:47:57] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:47:57] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:47:57] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:47:57] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [04/Mar/2026 22:47:58] code 404, message File not found
+149.19.165.129 - - [04/Mar/2026 22:47:58] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:47:59] code 404, message File not found
+168.181.64.186 - - [04/Mar/2026 22:47:59] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:49:33] code 400, message Bad request version ('Éh]õaN4dØ\\x98ÔCÕ\\x00*\\x9a\\x9a\\x13\\x02\\x13\\x03\\x13\\x01À,À+Ì©À0À/Ì¨À')
+168.181.64.186 - - [04/Mar/2026 22:49:33] "\x16\x03\x01\x05å\x01\x00\x05á\x03\x03\x14±\x98\x7fÁiFP¾m_}àjÿìÓ\x96\x8cB\x1c57\x95´\x96ÅL\x0c[éü è \x0d\x0c&\x05#\x1f\x90Ê©\x8c\x02\x93êê\x9f\x81\x1cÉh]õaN4dØ\x98ÔCÕ\x00*\x9a\x9a\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À" 400 -
+149.19.165.129 - - [04/Mar/2026 22:49:34] code 400, message Bad request version ('\\x00,**\\x13\\x02\\x13\\x03\\x13\\x01À,À+Ì©À0À/Ì¨À')
+149.19.165.129 - - [04/Mar/2026 22:49:34] "\x16\x03\x01\x05ç\x01\x00\x05ã\x03\x03û_\x8bBè\x95K\x00gëeºÿÏ®/u¿n\x9el\x81nÃ\x15á×/\x90Ý\\Ü aL\x11HÇìóÅÄùdÛ¦\x95ºrjÏk1\x04<O\x14üÝ\x02\x94;\x0bÖ\x0b\x00,**\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À" 400 -
+168.181.64.246 - - [04/Mar/2026 22:50:43] "GET / HTTP/1.1" 200 -
+168.181.64.246 - - [04/Mar/2026 22:50:43] code 404, message File not found
+168.181.64.246 - - [04/Mar/2026 22:50:43] "GET /favicon.ico HTTP/1.1" 404 -
+168.181.64.186 - - [04/Mar/2026 22:53:20] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [04/Mar/2026 23:25:59] "GET / HTTP/1.1" 304 -
+179.98.71.109 - - [04/Mar/2026 23:26:01] "GET / HTTP/1.1" 200 -
+179.98.71.109 - - [04/Mar/2026 23:26:01] code 404, message File not found
+179.98.71.109 - - [04/Mar/2026 23:26:01] "GET /favicon.ico HTTP/1.1" 404 -
+----------------------------------------
+Exception occurred during processing of request from ('199.45.154.153', 47000)
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.12/http/server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "/usr/lib/python3.12/http/server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.12/socketserver.py", line 761, in __init__
+    self.handle()
+  File "/usr/lib/python3.12/http/server.py", line 436, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.12/http/server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+199.45.154.153 - - [04/Mar/2026 23:37:06] "GET / HTTP/1.1" 200 -
+199.45.154.153 - - [04/Mar/2026 23:37:09] code 400, message Bad request version ('À\\x14À')
+199.45.154.153 - - [04/Mar/2026 23:37:09] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ëN|,6\x875äÎ\x98\x95\x07g\x96º)»KçQ^å$Óz\x85ðÑ\x13¡ Ð ¢8ÿzo\x19ì7þµÃjÆ\x8b\x7f\x816\x94²\x85y038\x94ºë\x99ðòkf\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
+199.45.154.153 - - [04/Mar/2026 23:37:10] "GET / HTTP/1.1" 200 -
+199.45.154.153 - - [04/Mar/2026 23:37:11] code 505, message Invalid HTTP version (2.0)
+199.45.154.153 - - [04/Mar/2026 23:37:11] "PRI * HTTP/2.0" 505 -
+199.45.154.153 - - [04/Mar/2026 23:37:12] code 404, message File not found
+199.45.154.153 - - [04/Mar/2026 23:37:12] "GET /favicon.ico HTTP/1.1" 404 -
+199.45.154.153 - - [04/Mar/2026 23:37:16] code 400, message Bad request version ('À\\x14À')
+199.45.154.153 - - [04/Mar/2026 23:37:16] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03|¹ÖS\x1a·Iè<ærè\x05¢@ürFßÇSr¬\x07¤Sü\x01o\x89¼\x86 \x802¥ä]\x7f#\x96½\x109|\x9eA)ý³¹f~ã·\x95¼>\x00ÔäÜxµ2\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
+199.45.154.153 - - [04/Mar/2026 23:37:17] code 404, message File not found
+199.45.154.153 - - [04/Mar/2026 23:37:17] "GET /security.txt HTTP/1.1" 404 -
+193.32.162.28 - - [05/Mar/2026 01:54:15] code 501, message Unsupported method ('POST')
+193.32.162.28 - - [05/Mar/2026 01:54:15] "POST / HTTP/1.1" 501 -
+193.32.162.28 - - [05/Mar/2026 01:54:16] code 501, message Unsupported method ('POST')
+193.32.162.28 - - [05/Mar/2026 01:54:16] "POST /_next HTTP/1.1" 501 -
+193.32.162.28 - - [05/Mar/2026 01:54:16] code 501, message Unsupported method ('POST')
+193.32.162.28 - - [05/Mar/2026 01:54:16] "POST /api HTTP/1.1" 501 -
+193.32.162.28 - - [05/Mar/2026 01:54:16] code 501, message Unsupported method ('POST')
+193.32.162.28 - - [05/Mar/2026 01:54:16] "POST /_next/server HTTP/1.1" 501 -
+193.32.162.28 - - [05/Mar/2026 01:54:16] code 501, message Unsupported method ('POST')
+193.32.162.28 - - [05/Mar/2026 01:54:16] "POST /app HTTP/1.1" 501 -
+193.32.162.28 - - [05/Mar/2026 01:54:16] code 501, message Unsupported method ('POST')
+193.32.162.28 - - [05/Mar/2026 01:54:16] "POST /api/route HTTP/1.1" 501 -
+85.217.140.18 - - [05/Mar/2026 02:48:01] code 400, message Bad request version ('Ø4r+jÙ')
+85.217.140.18 - - [05/Mar/2026 02:48:01] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Þ,éüé/*LÑe¨ò\x14®\x0bx@Q\x8c\x03 Ø4r+jÙ" 400 -
+195.3.221.86 - - [05/Mar/2026 02:51:34] "GET / HTTP/1.1" 200 -
+195.3.221.86 - - [05/Mar/2026 02:51:34] code 501, message Unsupported method ('POST')
+195.3.221.86 - - [05/Mar/2026 02:51:34] "POST / HTTP/1.1" 501 -
+195.3.221.86 - - [05/Mar/2026 02:51:34] code 501, message Unsupported method ('POST')
+195.3.221.86 - - [05/Mar/2026 02:51:34] "POST /_next HTTP/1.1" 501 -
+195.3.221.86 - - [05/Mar/2026 02:51:34] code 501, message Unsupported method ('POST')
+195.3.221.86 - - [05/Mar/2026 02:51:34] "POST /api HTTP/1.1" 501 -
+195.3.221.86 - - [05/Mar/2026 02:51:36] code 501, message Unsupported method ('POST')
+195.3.221.86 - - [05/Mar/2026 02:51:36] "POST /_next/server HTTP/1.1" 501 -
+195.3.221.86 - - [05/Mar/2026 02:51:36] code 501, message Unsupported method ('POST')
+195.3.221.86 - - [05/Mar/2026 02:51:36] "POST /app HTTP/1.1" 501 -
+195.3.221.86 - - [05/Mar/2026 02:51:36] code 501, message Unsupported method ('POST')
+195.3.221.86 - - [05/Mar/2026 02:51:36] "POST /api/route HTTP/1.1" 501 -
+81.168.83.103 - - [05/Mar/2026 03:41:55] code 404, message File not found
+81.168.83.103 - - [05/Mar/2026 03:41:55] "GET /config.js HTTP/1.0" 404 -
+172.238.213.69 - - [05/Mar/2026 03:45:05] code 400, message Bad request version ('À\\x14À')
+172.238.213.69 - - [05/Mar/2026 03:45:05] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03´êÐ\x06]\x1cÆ\x19Æ¤0\x7f\x80\x01s»\x87ë\x00\x8dD6òG_\x9fP\x8f\x00H$\x13\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" 400 -
+172.238.213.69 - - [05/Mar/2026 03:45:05] code 400, message Bad request version ('À\\x14À')
+172.238.213.69 - - [05/Mar/2026 03:45:05] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x830Oæ&\x15\x1as\x80t LÖ&\x87\x7foïÍö\x7f"E\x1c\x09\x1f\x8c\x9e¦Ä\x8dO\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" 400 -
+172.238.213.69 - - [05/Mar/2026 03:45:05] "GET / HTTP/1.1" 200 -
+172.238.213.69 - - [05/Mar/2026 03:45:06] code 404, message File not found
+172.238.213.69 - - [05/Mar/2026 03:45:06] "GET /login HTTP/1.1" 404 -
+172.238.213.69 - - [05/Mar/2026 03:45:06] code 404, message File not found
+172.238.213.69 - - [05/Mar/2026 03:45:06] "GET /AGENTS.md HTTP/1.1" 404 -
+204.76.203.73 - - [05/Mar/2026 04:18:14] code 400, message Bad request version ('À\\x13À')
+204.76.203.73 - - [05/Mar/2026 04:18:14] "\x16\x03\x01\x01\x0c\x01\x00\x01\x08\x03\x03\x9a(ó a¹f\x19]oÔ[ð¿'PM¸.Ñ\\Ðµ\x92R\x8c³Ág©©I \x04\x09T{\x91°kÿ­\x14\x9e#i£\x8a\x01ü^{RèäÜz\x91¨\x06\x9f;V²Ë\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
+204.76.203.73 - - [05/Mar/2026 04:18:14] code 404, message File not found
+204.76.203.73 - - [05/Mar/2026 04:18:14] "GET /..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd HTTP/1.1" 404 -
+204.76.203.215 - - [05/Mar/2026 05:23:11] code 400, message Bad request version ('À\\x13À')
+204.76.203.215 - - [05/Mar/2026 05:23:11] "\x16\x03\x01\x01\x0c\x01\x00\x01\x08\x03\x03éÜóý+ng\x05\x9aËÜ¤\x92¹´\x87|\x1d;æ®9×¸\x87âà§Y{NÐ 7ùÂ7D8?ûf\x99²×bczéïA\x86uÕ×\\(¶4Û\x7fjã\x1d4\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
+204.76.203.215 - - [05/Mar/2026 05:23:11] code 404, message File not found
+204.76.203.215 - - [05/Mar/2026 05:23:11] "GET /..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd HTTP/1.1" 404 -
+45.153.34.117 - - [05/Mar/2026 05:37:25] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:25] "CONNECT 1.1.1.1:443 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:25] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:25] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:26] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:26] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:27] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:27] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:27] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:27] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:28] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:28] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:29] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:29] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:29] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:29] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:29] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:29] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:30] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:30] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:31] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:31] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:31] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:31] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:31] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:31] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:32] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:32] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:33] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:33] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:33] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:33] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:34] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:34] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:35] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:35] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:36] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:36] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:36] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:36] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:37] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:37] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:38] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:38] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:38] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:38] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:38] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:38] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:39] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:39] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:40] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:40] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:40] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:40] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:41] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:41] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:41] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:41] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:42] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:42] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:42] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:42] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:42] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:42] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:43] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:43] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:44] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:44] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:45] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:45] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:45] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:45] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:46] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:46] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:47] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:47] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:47] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:47] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:48] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:48] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:48] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:48] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+45.153.34.117 - - [05/Mar/2026 05:37:49] code 501, message Unsupported method ('CONNECT')
+45.153.34.117 - - [05/Mar/2026 05:37:49] "CONNECT 45.153.34.117:80 HTTP/1.0" 501 -
+85.217.140.9 - - [05/Mar/2026 06:02:12] code 400, message Bad request version ('À\\x14À')
+85.217.140.9 - - [05/Mar/2026 06:02:12] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ö\x0cM»ä­s\x03\x96\x8c$«Ê]£f,oö\x9d(\x9cý\x00;â\x06U\x82Ýh\x8b Ù>\x18>ò÷çÚ\x050\x9f\x90â²\x95\\ßtc©Ü£×ÜôªvG6±Ðâ\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
+3.130.168.2 - - [05/Mar/2026 06:42:25] "GET / HTTP/1.1" 200 -
+3.130.168.2 - - [05/Mar/2026 06:46:36] code 400, message Bad HTTP/0.9 request type ('\\x16\\x03\\x01\\x00{\\x01\\x00\\x00w\\x03\\x03âÆßä\\x86¨ËlþjÞ\\x92kÒ\\x04f»kÊ\\x8b\\x9a8Þ\\x89\\x16â0SEù\\x94º\\x00\\x00\\x1aÀ/À+À\\x11À\\x07À\\x13À')
+3.130.168.2 - - [05/Mar/2026 06:46:36] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03âÆßä\x86¨ËlþjÞ\x92kÒ\x04f»kÊ\x8b\x9a8Þ\x89\x16â0SEù\x94º\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" 400 -
+3.130.168.2 - - [05/Mar/2026 06:48:43] code 400, message Bad request syntax ('SSH-2.0-Go')
+3.130.168.2 - - [05/Mar/2026 06:48:43] "SSH-2.0-Go" 400 -
+3.130.168.2 - - [05/Mar/2026 06:49:14] code 400, message Bad request version ('À\\x14À')
+3.130.168.2 - - [05/Mar/2026 06:49:14] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x036\x19ú_¹\x92P\x1egÎÐª0\x05fáÏÉ uà\x03\x91Íø\x93Qöª?¿\x87\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" 400 -
+152.255.116.19 - - [05/Mar/2026 09:07:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2026 09:30:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2026 09:30:15] "GET / HTTP/1.1" 200 -
+161.97.171.122 - - [05/Mar/2026 09:30:15] "GET /assets/dog_only_nobg.png HTTP/1.1" 200 -
+152.255.116.19 - - [05/Mar/2026 09:30:30] "GET / HTTP/1.1" 200 -
+152.255.116.19 - - [05/Mar/2026 09:30:31] "GET /assets/dog_only_nobg.png HTTP/1.1" 200 -
+152.255.116.19 - - [05/Mar/2026 09:30:34] "GET / HTTP/1.1" 200 -
+152.255.116.19 - - [05/Mar/2026 09:30:35] "GET /assets/dog_only_nobg.png HTTP/1.1" 200 -
+152.255.108.237 - - [05/Mar/2026 09:47:05] code 404, message File not found
+152.255.108.237 - - [05/Mar/2026 09:47:05] "GET /favicon.ico HTTP/1.1" 404 -
+152.255.116.19 - - [05/Mar/2026 09:57:57] code 400, message Bad request version ('\\x81LÌ\\x8aýh|#0ÿK\\x82½)s=iïc®¶"_É\\x9d~^\\x90i\\x93²*\\x00***\\x13\\x02\\x13\\x03\\x13\\x01À,À+Ì©À0À/Ì¨À')
+152.255.116.19 - - [05/Mar/2026 09:57:57] "\x16\x03\x01\x05å\x01\x00\x05á\x03\x03Ú{\x07~oÛ~úÏÂ¾6¾Çú8xÈâ¾\x94Y\x05g}\x1d\x93³T6¿è \x81LÌ\x8aýh|#0ÿK\x82½)s=iïc®¶"_É\x9d~^\x90i\x93²*\x00***\x13\x02\x13\x03\x13\x01À,À+Ì©À0À/Ì¨À" 400 -
+152.255.116.19 - - [05/Mar/2026 09:57:58] code 400, message Bad request version ('åf')
+152.255.116.19 - - [05/Mar/2026 09:57:58] "\x16\x03\x01\x05ç\x01\x00\x05ã\x03\x03\x96½¡i\x0bÀøZZ÷1÷~\x0eå\x0f\x15àæÓCþ{Û¿\x08uR1{»¹ åf" 400 -
+195.3.221.86 - - [05/Mar/2026 10:22:59] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [05/Mar/2026 10:56:24] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [05/Mar/2026 10:56:25] "GET /assets/dog_only_nobg.png HTTP/1.1" 200 -
+149.19.165.129 - - [05/Mar/2026 10:56:28] code 404, message File not found
+149.19.165.129 - - [05/Mar/2026 10:56:28] "GET /apple-touch-icon-152x152-precomposed.png HTTP/1.1" 404 -
+168.181.64.186 - - [05/Mar/2026 10:56:28] code 404, message File not found
+168.181.64.186 - - [05/Mar/2026 10:56:28] "GET /apple-touch-icon-152x152.png HTTP/1.1" 404 -
+149.19.165.129 - - [05/Mar/2026 10:56:29] code 404, message File not found
+149.19.165.129 - - [05/Mar/2026 10:56:29] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [05/Mar/2026 10:56:29] code 404, message File not found
+168.181.64.186 - - [05/Mar/2026 10:56:29] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+168.181.64.186 - - [05/Mar/2026 12:17:47] "GET / HTTP/1.1" 200 -
+149.19.165.129 - - [05/Mar/2026 12:17:48] "GET /assets/dog_only_nobg.png HTTP/1.1" 200 -
+85.217.140.16 - - [05/Mar/2026 12:41:07] code 501, message Unsupported method ("'GET")
+85.217.140.16 - - [05/Mar/2026 12:41:07] "'GET / HTTP/1.1" 501 -
+85.217.140.15 - - [05/Mar/2026 13:16:17] "GET / HTTP/1.1" 200 -
+198.235.24.87 - - [05/Mar/2026 14:02:35] "GET / HTTP/1.1" 200 -
+168.181.64.186 - - [05/Mar/2026 14:40:13] "GET / HTTP/1.1" 304 -
+168.181.64.186 - - [05/Mar/2026 14:40:13] "GET /assets/dog_only_nobg.png HTTP/1.1" 304 -
