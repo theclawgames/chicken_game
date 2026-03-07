@@ -574,12 +574,12 @@
 
     .iphone-mode .global-record {
       left: 8px;
-      top: calc(max(8px, env(safe-area-inset-top)) + 34px);
+      top: max(8px, env(safe-area-inset-top));
     }
 
     .ipad-mode .global-record {
       left: max(8px, env(safe-area-inset-left));
-      top: calc(max(8px, env(safe-area-inset-top)) + 34px);
+      top: max(8px, env(safe-area-inset-top));
     }
 
   </style>
@@ -658,66 +658,6 @@
     const RECORD_KEY = 'nutella_global_record_dogs';
     let globalRecordDogs = Number(localStorage.getItem(RECORD_KEY) || 1);
     if (!Number.isFinite(globalRecordDogs) || globalRecordDogs < 1) globalRecordDogs = 1;
-    let remoteRecordDogs = globalRecordDogs;
-    let syncInFlight = false;
-    const API_FALLBACK = 'http://161.97.171.122:8000';
-
-    function buildApiUrl(path) {
-      const isLocalHost = window.location.host === '161.97.171.122:8000' || window.location.host === '161.97.171.122';
-      if (isLocalHost) return path;
-      return API_FALLBACK + path;
-    }
-
-
-    function paintGlobalRecord() {
-      const merged = Math.max(globalRecordDogs, remoteRecordDogs, 1);
-      globalRecordDogs = merged;
-      if (globalRecordLabel) globalRecordLabel.textContent = '🏆 ' + merged;
-    }
-
-    async function loadGlobalRecord() {
-      try {
-        const r = await fetch(buildApiUrl('/api/highscore?t=' + Date.now()), { cache: 'no-store' });
-        if (!r.ok) return;
-        const j = await r.json();
-        const remote = Number(j.maxDogs || 1);
-        if (Number.isFinite(remote) && remote > 0) {
-          remoteRecordDogs = remote;
-          if (remote > globalRecordDogs) {
-            globalRecordDogs = remote;
-            localStorage.setItem(RECORD_KEY, String(globalRecordDogs));
-          }
-          paintGlobalRecord();
-        }
-      } catch (_) {}
-    }
-
-    async function pushGlobalRecordIfNeeded() {
-      if (syncInFlight) return;
-      syncInFlight = true;
-      try {
-        const r = await fetch(buildApiUrl('/api/highscore'), {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ maxDogs: Math.max(globalRecordDogs, remoteRecordDogs) })
-        });
-        if (r.ok) {
-          const j = await r.json();
-          const remote = Number(j.maxDogs || 1);
-          if (Number.isFinite(remote) && remote > 0) {
-            remoteRecordDogs = remote;
-            if (remote > globalRecordDogs) {
-              globalRecordDogs = remote;
-              localStorage.setItem(RECORD_KEY, String(globalRecordDogs));
-            }
-          }
-        }
-      } catch (_) {
-      } finally {
-        syncInFlight = false;
-        paintGlobalRecord();
-      }
-    }
 
     const keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false };
 
@@ -808,9 +748,8 @@
       if (game.dogs.length > globalRecordDogs) {
         globalRecordDogs = game.dogs.length;
         localStorage.setItem(RECORD_KEY, String(globalRecordDogs));
-        pushGlobalRecordIfNeeded();
       }
-      paintGlobalRecord();
+      if (globalRecordLabel) globalRecordLabel.textContent = '🏆 ' + globalRecordDogs;
     }
 
     function nextLevel() {
@@ -1125,10 +1064,6 @@
       document.addEventListener('pointerdown', tryLockLandscape, { once: true });
       spawnDogs(1);
       updateHUD();
-      loadGlobalRecord();
-      setTimeout(loadGlobalRecord, 600);
-      setInterval(loadGlobalRecord, 1000);
-      document.addEventListener('visibilitychange', () => { if (!document.hidden) loadGlobalRecord(); });
       tick();
     }
 

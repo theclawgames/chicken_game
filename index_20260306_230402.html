@@ -574,12 +574,12 @@
 
     .iphone-mode .global-record {
       left: 8px;
-      top: calc(max(8px, env(safe-area-inset-top)) + 34px);
+      top: max(8px, env(safe-area-inset-top));
     }
 
     .ipad-mode .global-record {
       left: max(8px, env(safe-area-inset-left));
-      top: calc(max(8px, env(safe-area-inset-top)) + 34px);
+      top: max(8px, env(safe-area-inset-top));
     }
 
   </style>
@@ -660,14 +660,6 @@
     if (!Number.isFinite(globalRecordDogs) || globalRecordDogs < 1) globalRecordDogs = 1;
     let remoteRecordDogs = globalRecordDogs;
     let syncInFlight = false;
-    const API_FALLBACK = 'http://161.97.171.122:8000';
-
-    function buildApiUrl(path) {
-      const isLocalHost = window.location.host === '161.97.171.122:8000' || window.location.host === '161.97.171.122';
-      if (isLocalHost) return path;
-      return API_FALLBACK + path;
-    }
-
 
     function paintGlobalRecord() {
       const merged = Math.max(globalRecordDogs, remoteRecordDogs, 1);
@@ -677,7 +669,7 @@
 
     async function loadGlobalRecord() {
       try {
-        const r = await fetch(buildApiUrl('/api/highscore?t=' + Date.now()), { cache: 'no-store' });
+        const r = await fetch('/api/highscore?t=' + Date.now(), { cache: 'no-store' });
         if (!r.ok) return;
         const j = await r.json();
         const remote = Number(j.maxDogs || 1);
@@ -696,7 +688,7 @@
       if (syncInFlight) return;
       syncInFlight = true;
       try {
-        const r = await fetch(buildApiUrl('/api/highscore'), {
+        const r = await fetch('/api/highscore', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ maxDogs: Math.max(globalRecordDogs, remoteRecordDogs) })
@@ -1125,10 +1117,6 @@
       document.addEventListener('pointerdown', tryLockLandscape, { once: true });
       spawnDogs(1);
       updateHUD();
-      loadGlobalRecord();
-      setTimeout(loadGlobalRecord, 600);
-      setInterval(loadGlobalRecord, 1000);
-      document.addEventListener('visibilitychange', () => { if (!document.hidden) loadGlobalRecord(); });
       tick();
     }
 

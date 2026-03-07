@@ -574,12 +574,12 @@
 
     .iphone-mode .global-record {
       left: 8px;
-      top: calc(max(8px, env(safe-area-inset-top)) + 34px);
+      top: max(8px, env(safe-area-inset-top));
     }
 
     .ipad-mode .global-record {
       left: max(8px, env(safe-area-inset-left));
-      top: calc(max(8px, env(safe-area-inset-top)) + 34px);
+      top: max(8px, env(safe-area-inset-top));
     }
 
   </style>
@@ -1125,10 +1125,6 @@
       document.addEventListener('pointerdown', tryLockLandscape, { once: true });
       spawnDogs(1);
       updateHUD();
-      loadGlobalRecord();
-      setTimeout(loadGlobalRecord, 600);
-      setInterval(loadGlobalRecord, 1000);
-      document.addEventListener('visibilitychange', () => { if (!document.hidden) loadGlobalRecord(); });
       tick();
     }
 
